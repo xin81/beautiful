@@ -8,6 +8,10 @@ int sum(int a, int b){
  return (a+b);
 }
 
+int product(int a, int b){
+ return (a*b);
+}
+
 // Ausgabe des von EntwicklerHeld sinnfrei geposteten Quellcode auf Facebook
 void output1(int min, int max){
 printf("function sum(a, b){\n");
@@ -29,6 +33,14 @@ void output2(int min, int max){
  }
 }
 
+void output3(int min, int max){
+for(int i=min; i < max; i++){
+ for(int j=min; j < max; j++){
+  printf("%d * %d = %d\n", i, j, product(i, j));
+ }
+}
+}
+
 int main(int argc, char* argv[]){
 int min=0;
 int max=min;
@@ -39,6 +51,8 @@ printf("Geben Sie max ein.\n");
 scanf("%d", &max);
 if(OPTION==1){
  output1(min, max);
+}else if(OPTION==2){
+ output3(min, max);
 }else{
  output2(min, max);
 }

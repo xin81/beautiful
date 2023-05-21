@@ -9,6 +9,8 @@ compile0:
 	$(CC) -c -D$(DEFNAME)=0 $(SOURCE)
 compile1:
 	$(CC) -c -D$(DEFNAME)=1 $(SOURCE)
+compile2:
+	$(CC) -c -D$(DEFNAME)=2 $(SOURCE)
 build:
 	$(CC) $(OBJ) -o $(TARGET)
 clean:
